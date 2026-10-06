@@ -27,11 +27,11 @@
       },
       {
        "tipe": "teks",
-       "isi": "Rukun syahadat ada 2:"
+       "isi": ""
       },
       {
        "tipe": "kartu",
-       "label": "Rukun 1",
+       "label": "Kalimat 1",
        "judul": "Tidak ada Tuhan yang berhak disembah kecuali Alloh",
        "isi": [
         {
@@ -67,7 +67,7 @@
       },
       {
        "tipe": "kartu",
-       "label": "Rukun 2",
+       "label": "Kalimat 2",
        "judul": "Nabi Muhammad adalah utusan Alloh",
        "isi": [
         {
