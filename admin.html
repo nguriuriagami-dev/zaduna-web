@@ -219,6 +219,7 @@ function errText(status){
   return 'Gagal (kode '+status+').';
 }
 async function load(){
+  if(!CFG) throw new Error('Sesi habis. Muat ulang halaman (refresh) lalu masuk lagi.');
   var r=await gh('/contents/isi.json?ref='+encodeURIComponent(CFG.branch));
   if(!r.ok) throw new Error(errText(r.status));
   var j=await r.json();
@@ -234,6 +235,7 @@ function clean(o){
   return o;
 }
 async function save(){
+  if(!CFG){msg('Sesi habis. Muat ulang halaman (refresh) lalu masuk lagi.','err');return}
   var btn=$('#saveBtn'); btn.disabled=true; msg('Menyimpan…');
   try{
     var body=JSON.stringify({message:'Update isi lewat admin',content:b64(JSON.stringify(clean(DATA),null,1)+'\n'),sha:SHA,branch:CFG.branch});
@@ -248,12 +250,12 @@ async function doLogin(){
   var repo=$('#repo').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,''), branch=$('#branch').value.trim()||'main', token=$('#token').value.trim();
   if(!/^[\w.-]+\/[\w.-]+$/.test(repo)){msg('Isi repository dengan format pemilik/nama-repo.','err');return}
   if(!token){msg('Tempel token akses terlebih dahulu.','err');return}
-  CFG={repo:repo,branch:branch,token:token}; msg('Memuat…');
+  var prev=CFG, cfg={repo:repo,branch:branch,token:token}; CFG=cfg; msg('Memuat…');
   try{
     await load();
-    if($('#ingat').checked){try{localStorage.setItem('zaaduna_admin',JSON.stringify(CFG))}catch(e){}}
+    if($('#ingat').checked){try{localStorage.setItem('zaaduna_admin',JSON.stringify(cfg))}catch(e){}}
     msg(''); render();
-  }catch(e){CFG=null;msg(e.message||'Gagal masuk.','err')}
+  }catch(e){CFG=prev;msg(e.message||'Gagal masuk.','err')}
 }
 
 /* ---------- aksi ---------- */
@@ -317,7 +319,7 @@ window.addEventListener('beforeunload',function(e){if(dirty){e.preventDefault();
   var s=null; try{s=JSON.parse(localStorage.getItem('zaaduna_admin')||'null')}catch(e){}
   if(s&&s.token&&s.repo){
     CFG=s; msg('Memuat…');
-    try{await load();msg('');render()}catch(e){CFG=null;msg(e.message,'err')}
+    try{await load();msg('');render()}catch(e){if(!DATA){CFG=null;msg(e.message,'err')}}
   }
 })();
 </script>
