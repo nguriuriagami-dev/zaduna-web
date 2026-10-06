@@ -1,0 +1,227 @@
+/* ==========================================================================
+   ZAADUNA — BERKAS ISI (isi.js) — EDIT FILE INI SAJA
+   --------------------------------------------------------------------------
+   Aturan singkat:
+   • Teks selalu diapit tanda kutip ganda "..."  dan dipisah koma.
+   • Jika di dalam teks ada tanda kutip ganda, tulis \"  (garis miring + kutip).
+   • Tebalkan kata dengan **kata**.
+   • Jangan hapus tanda [ ] { } atau koma antar-item.
+   • File ini hanya berisi isi. Tampilan ada di index.html (jangan diubah).
+   ========================================================================== */
+
+/* ---------- 1. IDENTITAS SITUS ---------- */
+const SITUS = {
+  nama:     "ZAADUNA",
+  arab:     "زادنا",
+  subjudul: "Bekal kita mengenal Islam, Iman, Ihsan, Akhlak dan Do'a Harian",
+  footer:   "<b>ZAADUNA.web</b><br>Islam · Iman · Ihsan · Akhlak · Do'a Harian"
+};
+
+/* ---------- 2. HALAMAN / TAB ----------
+   Setiap halaman = satu tab. Untuk MENAMBAH TAB BARU, salin satu blok
+   { id:"...", judul:"...", makna:"...", isi:[ ... ] }  lalu beri id unik.
+
+   Jenis blok di dalam "isi":
+   { tipe:"judul",   teks:"Judul bagian" }
+   { tipe:"teks",    isi:"Paragraf biasa" }
+   { tipe:"arab",    isi:"نص عربي" }
+   { tipe:"daftar",  label:"Syarat", judul:"(opsional)", isi:["poin 1","poin 2"] }
+   { tipe:"pembatal",judul:"Pembatal", isi:["poin 1","poin 2"] }      (kartu merah)
+   { tipe:"pasangan",label:"Syarat", isi:[ ["Ilmu","lawan: Jahil"], ... ] }
+   { tipe:"kartu",   label:"Rukun 1", judul:"...", isi:[ blok lain ] }
+   { tipe:"grid",    isi:[ blok, blok ] }                              (berdampingan)
+   { tipe:"lipat",   judul:"1. ...", buka:true, isi:[ blok lain ] }    (bisa dibuka-tutup)
+   { tipe:"nomor",   isi:[ {judul:"...", isi:"..."}, ... ] }           (daftar bernomor)
+   { tipe:"catatan", isi:"Catatan kecil di bawah" }
+*/
+const HALAMAN = [
+
+/* ===================== ISLAM ===================== */
+{
+  id:"islam", judul:"Islam",
+  makna:"Berserah diri kepada Alloh dengan mengesakan-Nya, tunduk kepada-Nya dengan ketaatan, serta berlepas diri dari syirik dan pelakunya.",
+  isi:[
+    { tipe:"judul", teks:"Rukun Islam" },
+
+    { tipe:"lipat", judul:"1. Dua Kalimat Syahadat", buka:true, isi:[
+      { tipe:"arab", isi:"أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ" },
+      { tipe:"teks", isi:"Rukun syahadat ada 2:" },
+      { tipe:"kartu", label:"Rukun 1", judul:"Tidak ada Tuhan yang berhak disembah kecuali Alloh", isi:[
+        { tipe:"grid", isi:[
+          { tipe:"daftar", label:"Rukun", isi:[
+            "**Meniadakan** — segala bentuk penghambaan dan peribadatan (kepada selain Alloh)",
+            "**Menetapkan** — penghambaan dan peribadatan hanya kepada Alloh"
+          ]},
+          { tipe:"pembatal", judul:"Pembatal", isi:["Syirik"] }
+        ]}
+      ]},
+      { tipe:"kartu", label:"Rukun 2", judul:"Nabi Muhammad adalah utusan Alloh", isi:[
+        { tipe:"teks", isi:"Mentaati perintahnya, membenarkan kabarnya, menjauhi larangannya, dan beribadah sesuai tuntunannya." }
+      ]},
+      { tipe:"kartu", label:"Syarat Syahadat", isi:[
+        { tipe:"pasangan", isi:[
+          ["Ilmu","lawan: Jahil"],
+          ["Yakin","lawan: Ragu"],
+          ["Menerima","lawan: Menentang"],
+          ["Patuh","lawan: Meninggalkan"],
+          ["Jujur","lawan: Dusta"],
+          ["Ikhlas","lawan: Syirik (riya')"],
+          ["Cinta","lawan: Benci"]
+        ]}
+      ]}
+    ]},
+
+    { tipe:"lipat", judul:"2. Sholat", isi:[
+      { tipe:"grid", isi:[
+        { tipe:"daftar", label:"Syarat", isi:[
+          "Islam","Berakal","Tamyiz (dapat membedakan baik–buruk)","Masuk waktu sholat",
+          "Suci dari hadats (wudhu/mandi)","Suci badan, pakaian dan tempat dari najis",
+          "Menutup aurat","Menghadap kiblat","Niat"
+        ]},
+        { tipe:"daftar", label:"Rukun", isi:[
+          "Berdiri bagi yang mampu","Takbiratul ihram","Membaca Al-Fatihah","Ruku' dan thuma'ninah",
+          "I'tidal dan thuma'ninah","Sujud dua kali dan thuma'ninah","Duduk di antara dua sujud",
+          "Tasyahud akhir dan duduknya","Sholawat atas Nabi ﷺ","Salam","Tertib"
+        ]}
+      ]},
+      { tipe:"pembatal", judul:"Pembatal", isi:[
+        "Berbicara dengan sengaja","Makan atau minum","Banyak bergerak secara berturut-turut tanpa keperluan",
+        "Tertawa terbahak-bahak","Berhadats","Terbuka aurat","Membelakangi kiblat",
+        "Meninggalkan rukun atau syarat tanpa uzur"
+      ]}
+    ]},
+
+    { tipe:"lipat", judul:"3. Puasa Ramadhan", isi:[
+      { tipe:"grid", isi:[
+        { tipe:"daftar", label:"Syarat", isi:[
+          "Islam","Baligh","Berakal","Mampu (tidak sakit/uzur)","Mukim (tidak safar)",
+          "Bagi wanita: suci dari haid dan nifas"
+        ]},
+        { tipe:"daftar", label:"Rukun", isi:[
+          "Niat (sebelum terbit fajar untuk puasa wajib)",
+          "Menahan diri dari pembatal sejak terbit fajar hingga terbenam matahari"
+        ]}
+      ]},
+      { tipe:"pembatal", judul:"Pembatal", isi:[
+        "Makan dan minum dengan sengaja","Jima' (hubungan suami istri) di siang hari",
+        "Muntah dengan sengaja","Keluar mani dengan sengaja","Haid atau nifas","Murtad"
+      ]}
+    ]},
+
+    { tipe:"lipat", judul:"4. Zakat", isi:[
+      { tipe:"grid", isi:[
+        { tipe:"daftar", label:"Syarat Wajib", isi:[
+          "Islam","Merdeka","Milik penuh atas harta","Mencapai nisab",
+          "Berlalu haul (satu tahun), kecuali hasil pertanian dll."
+        ]},
+        { tipe:"daftar", label:"Rukun", isi:[
+          "Niat","Menyerahkan zakat kepada yang berhak (mustahik)"
+        ]}
+      ]},
+      { tipe:"teks", label:"8 Golongan Penerima", isi:"**8 golongan penerima:** Fakir, miskin, amil, muallaf, riqab (budak), gharim (orang berhutang), fi sabilillah, dan ibnu sabil." },
+      { tipe:"pembatal", judul:"Pembatal / Penghalang Sahnya", isi:[
+        "Tidak berniat","Diberikan kepada yang bukan mustahik","Menunda tanpa uzur hingga berdosa"
+      ]}
+    ]},
+
+    { tipe:"lipat", judul:"5. Haji", isi:[
+      { tipe:"grid", isi:[
+        { tipe:"daftar", label:"Syarat Wajib", isi:[
+          "Islam","Baligh","Berakal","Merdeka","Mampu (bekal dan kesehatan)","Bagi wanita: disertai mahram"
+        ]},
+        { tipe:"daftar", label:"Rukun", isi:[
+          "Ihram (niat)","Wukuf di Arafah","Thawaf ifadhah","Sa'i antara Shafa dan Marwah",
+          "Tahallul (mencukur/memotong rambut)","Tertib"
+        ]}
+      ]},
+      { tipe:"pembatal", judul:"Pembatal", isi:[
+        "Jima' sebelum tahallul awal","Murtad","Tidak hadir wukuf di Arafah (hajinya luput)"
+      ]}
+    ]},
+
+    { tipe:"catatan", isi:"Rincian fikih dapat berbeda antar madzhab. Untuk penerapan detail, rujuklah guru atau ustadz terpercaya." }
+  ]
+},
+
+/* ===================== IMAN ===================== */
+{
+  id:"iman", judul:"Iman",
+  makna:"Keyakinan dalam hati, perkataan dengan lisan, perbuatan dengan anggota badan; bertambah dengan ketaatan dan berkurang dengan kemaksiatan.",
+  isi:[
+    { tipe:"judul", teks:"Rukun Iman" },
+    { tipe:"nomor", isi:[
+      { judul:"Iman kepada Alloh",        isi:"Meyakini keberadaan, rububiyah, uluhiyah, serta nama dan sifat-Nya." },
+      { judul:"Iman kepada Malaikat",     isi:"Makhluk Alloh dari cahaya yang senantiasa taat melaksanakan perintah-Nya." },
+      { judul:"Iman kepada Kitab",        isi:"Meyakini kitab-kitab yang diturunkan Alloh, dan Al-Qur'an sebagai penutupnya." },
+      { judul:"Iman kepada Rasul",        isi:"Meyakini para rasul yang diutus Alloh, dan Muhammad ﷺ sebagai penutupnya." },
+      { judul:"Iman kepada Hari Akhir",   isi:"Meyakini hari kiamat dan segala yang terjadi setelah kematian." },
+      { judul:"Iman kepada Takdir",       isi:"Meyakini bahwa baik dan buruk terjadi atas ilmu, kehendak dan penciptaan Alloh." }
+    ]}
+  ]
+},
+
+/* ===================== IHSAN ===================== */
+{
+  id:"ihsan", judul:"Ihsan",
+  makna:"Engkau beribadah kepada Alloh seakan-akan engkau melihat-Nya; jika engkau tidak melihat-Nya, maka sesungguhnya Dia melihatmu.",
+  isi:[
+    { tipe:"judul", teks:"2 Tingkatan Ihsan" },
+    { tipe:"grid", isi:[
+      { tipe:"kartu", label:"Tingkat 1", judul:"Musyahadah", isi:[
+        { tipe:"teks", isi:"Beribadah seakan-akan melihat Alloh; hati dipenuhi pengagungan dan kerinduan kepada-Nya." } ]},
+      { tipe:"kartu", label:"Tingkat 2", judul:"Muroqobah", isi:[
+        { tipe:"teks", isi:"Menyadari bahwa Alloh senantiasa melihat dan mengawasi, sehingga beribadah dengan sebaik-baiknya." } ]}
+    ]}
+  ]
+},
+
+/* ===================== AKHLAK ===================== */
+{
+  id:"akhlak", judul:"Akhlak",
+  makna:"Sifat yang tertanam dalam jiwa yang melahirkan perbuatan dengan mudah, baik atau buruk. Akhlak mulia mencakup hubungan dengan sang Pencipta dan dengan sesama makhluk.",
+  isi:[
+    { tipe:"grid", isi:[
+      { tipe:"daftar", label:"Kholiq", judul:"Akhlak kepada Alloh", isi:[
+        "Tauhid dan ikhlas","Taat dan bersyukur","Sabar dan tawakal","Taubat dan berdzikir","Husnuzhan kepada-Nya"
+      ]},
+      { tipe:"daftar", label:"Makhluk", judul:"Akhlak kepada Makhluk", isi:[
+        "Berbakti kepada orang tua","Jujur dan amanah","Menyambung silaturahmi",
+        "Menghormati tetangga dan tamu","Menyayangi hewan dan menjaga lingkungan"
+      ]}
+    ]}
+  ]
+},
+
+/* ===================== DO'A HARIAN ===================== */
+{ id:"doa", judul:"Do'a Harian", tipe:"doa" }
+
+];
+
+/* ---------- 3. DAFTAR DO'A HARIAN ----------
+   Untuk MENAMBAH DO'A, salin satu blok { t:"...", i:[ {...} ] } lalu ganti isinya.
+   t = judul do'a
+   i = daftar bacaan. Tiap bacaan:
+       s = sub-judul (opsional, mis. "Masuk", "Keluar")
+       a = teks Arab     l = tulisan latin     m = arti
+*/
+const DOA = [
+{t:"Bangun Tidur",i:[{a:"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",l:"Alhamdulillahilladzi ahyana ba'da ma amatana wa ilaihin nusyur.",m:"Segala puji bagi Alloh yang menghidupkan kami setelah mematikan kami, dan kepada-Nya kami dibangkitkan."}]},
+{t:"Masuk & Keluar Kamar Mandi",i:[{s:"Masuk",a:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",l:"Allahumma inni a'udzu bika minal khubutsi wal khaba'its.",m:"Ya Alloh, aku berlindung kepada-Mu dari setan laki-laki dan setan perempuan."},{s:"Keluar",a:"غُفْرَانَكَ",l:"Ghufranaka.",m:"Aku memohon ampunan-Mu."}]},
+{t:"Sebelum & Sesudah Wudhu",i:[{s:"Sebelum",a:"بِسْمِ اللَّهِ",l:"Bismillah.",m:"Dengan nama Alloh."},{s:"Sesudah",a:"أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ",l:"Asyhadu alla ilaha illallah wahdahu la syarika lah, wa asyhadu anna Muhammadan 'abduhu wa rasuluh. Allahummaj'alni minat tawwabin waj'alni minal mutathahhirin.",m:"Aku bersaksi tiada Tuhan selain Alloh semata, tiada sekutu bagi-Nya, dan Muhammad hamba serta utusan-Nya. Ya Alloh, jadikan aku termasuk orang yang bertaubat dan orang yang bersuci."}]},
+{t:"Ketika Bercermin",i:[{a:"اللَّهُمَّ أَنْتَ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",l:"Allahumma anta hassanta khalqi fahassin khuluqi.",m:"Ya Alloh, Engkau telah memperbagus rupaku, maka perbaguslah akhlakku."}]},
+{t:"Memakai & Menanggalkan Pakaian",i:[{s:"Memakai",a:"الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",l:"Alhamdulillahilladzi kasani hadza wa razaqanihi min ghairi haulin minni wa la quwwah.",m:"Segala puji bagi Alloh yang memberiku pakaian ini dan rezeki ini tanpa daya dan kekuatan dariku."},{s:"Menanggalkan",a:"بِسْمِ اللَّهِ",l:"Bismillah.",m:"Dengan nama Alloh."}]},
+{t:"Memakai Baju Baru",i:[{a:"اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ خَيْرَهُ وَخَيْرَ مَا صُنِعَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ",l:"Allahumma lakal hamdu anta kasautanihi, as'aluka khairahu wa khaira ma shuni'a lah, wa a'udzu bika min syarrihi wa syarri ma shuni'a lah.",m:"Ya Alloh, bagi-Mu segala puji, Engkau yang memberiku pakaian ini. Aku mohon kebaikannya dan kebaikan tujuan dibuatnya, dan aku berlindung dari keburukannya dan keburukan tujuan dibuatnya."}]},
+{t:"Keluar & Masuk Rumah",i:[{s:"Keluar",a:"بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",l:"Bismillah, tawakkaltu 'alallah, wa la haula wa la quwwata illa billah.",m:"Dengan nama Alloh, aku bertawakal kepada Alloh, tiada daya dan kekuatan kecuali dengan pertolongan Alloh."},{s:"Masuk",a:"بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا",l:"Bismillahi walajna, wa bismillahi kharajna, wa 'ala rabbina tawakkalna.",m:"Dengan nama Alloh kami masuk, dengan nama Alloh kami keluar, dan kepada Rabb kami, kami bertawakal. (Lalu ucapkan salam kepada penghuni rumah.)"}]},
+{t:"Menuju Masjid",i:[{a:"اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا، وَعَنْ يَمِينِي نُورًا، وَعَنْ يَسَارِي نُورًا، وَفَوْقِي نُورًا، وَتَحْتِي نُورًا، وَأَمَامِي نُورًا، وَخَلْفِي نُورًا، وَاجْعَلْ لِي نُورًا",l:"Allahummaj'al fi qalbi nura, wa fi basari nura, wa fi sam'i nura, wa 'an yamini nura, wa 'an yasari nura, wa fauqi nura, wa tahti nura, wa amami nura, wa khalfi nura, waj'al li nura.",m:"Ya Alloh, jadikanlah cahaya dalam hatiku, penglihatanku, pendengaranku, di kananku, kiriku, atasku, bawahku, depanku, belakangku, dan jadikanlah untukku cahaya."}]},
+{t:"Masuk & Keluar Masjid",i:[{s:"Masuk",a:"بِسْمِ اللَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",l:"Bismillah, was-salatu was-salamu 'ala rasulillah. Allahummaftah li abwaba rahmatik.",m:"Dengan nama Alloh, sholawat dan salam atas Rasulullah. Ya Alloh, bukakanlah untukku pintu-pintu rahmat-Mu."},{s:"Keluar",a:"بِسْمِ اللَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",l:"Bismillah, was-salatu was-salamu 'ala rasulillah. Allahumma inni as'aluka min fadlik.",m:"Dengan nama Alloh, sholawat dan salam atas Rasulullah. Ya Alloh, aku memohon karunia-Mu."}]},
+{t:"Dzikir Setelah Sholat",i:[{s:"Istighfar (3x)",a:"أَسْتَغْفِرُ اللَّهَ",l:"Astaghfirullah.",m:"Aku memohon ampun kepada Alloh."},{s:"Setelahnya",a:"اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",l:"Allahumma antas-salam wa minkas-salam, tabarakta ya dzal jalali wal ikram.",m:"Ya Alloh, Engkau As-Salam dan dari-Mu keselamatan, Maha Berkah Engkau wahai Pemilik keagungan dan kemuliaan."},{s:"Tasbih, tahmid, takbir (masing-masing 33x)",a:"سُبْحَانَ اللَّهِ • الْحَمْدُ لِلَّهِ • اللَّهُ أَكْبَرُ",l:"Subhanallah • Alhamdulillah • Allahu Akbar.",m:"Maha Suci Alloh • Segala puji bagi Alloh • Alloh Maha Besar. Digenapkan 100 dengan: La ilaha illallah wahdahu la syarika lah..."}]},
+{t:"Dzikir Pagi & Petang",i:[{s:"Dibaca 3x pagi dan petang",a:"بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",l:"Bismillahilladzi la yadurru ma'asmihi syai'un fil ardi wa la fis-sama', wa huwas-sami'ul 'alim.",m:"Dengan nama Alloh yang tidak ada sesuatu pun di bumi dan langit yang membahayakan bersama nama-Nya, dan Dia Maha Mendengar lagi Maha Mengetahui."},{s:"Dianjurkan juga",a:"آيَةُ الْكُرْسِيِّ، وَسُورَةُ الْإِخْلَاصِ وَالْفَلَقِ وَالنَّاسِ (3x)",l:"Ayat Kursi, Al-Ikhlash, Al-Falaq dan An-Nas (3x).",m:"Dibaca setiap pagi dan petang."}]},
+{t:"Makan & Sesudah Makan + Ketika Lupa",i:[{s:"Sebelum makan",a:"بِسْمِ اللَّهِ",l:"Bismillah.",m:"Dengan nama Alloh."},{s:"Sesudah makan",a:"الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ",l:"Alhamdulillahilladzi ath'amana wa saqana wa ja'alana muslimin.",m:"Segala puji bagi Alloh yang memberi kami makan dan minum serta menjadikan kami muslim."},{s:"Jika lupa membaca di awal",a:"بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ",l:"Bismillahi awwalahu wa akhirahu.",m:"Dengan nama Alloh di awal dan di akhirnya."}]},
+{t:"Naik Kendaraan",i:[{a:"سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ",l:"Subhanalladzi sakhkhara lana hadza wa ma kunna lahu muqrinin, wa inna ila rabbina lamunqalibun.",m:"Maha Suci Dzat yang menundukkan kendaraan ini untuk kami, padahal kami tidak mampu menguasainya, dan sesungguhnya kepada Rabb kami, kami akan kembali."}]},
+{t:"Memohon Tambahan Ilmu",i:[{a:"رَبِّ زِدْنِي عِلْمًا",l:"Rabbi zidni 'ilma.",m:"Ya Rabb-ku, tambahkanlah ilmu kepadaku. (QS. Thaha: 114)"}]},
+{t:"Meminta & Turun Hujan",i:[{s:"Meminta hujan",a:"اللَّهُمَّ اسْقِنَا غَيْثًا مُغِيثًا مَرِيئًا مَرِيعًا نَافِعًا غَيْرَ ضَارٍّ عَاجِلًا غَيْرَ آجِلٍ",l:"Allahummasqina ghaitsan mughitsan mari'an marii'an nafi'an ghaira dharrin 'ajilan ghaira ajil.",m:"Ya Alloh, turunkan hujan yang menolong, menyuburkan, bermanfaat, tidak membahayakan, segera dan tidak ditunda."},{s:"Saat hujan turun",a:"اللَّهُمَّ صَيِّبًا نَافِعًا",l:"Allahumma shayyiban nafi'a.",m:"Ya Alloh, jadikanlah hujan ini hujan yang bermanfaat."}]},
+{t:"Agar Hujan Berhenti",i:[{a:"اللَّهُمَّ حَوَالَيْنَا وَلَا عَلَيْنَا",l:"Allahumma hawalaina wa la 'alaina.",m:"Ya Alloh, turunkan hujan di sekitar kami, bukan menimpa kami."}]},
+{t:"Ketika Petir",i:[{a:"سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ",l:"Subhanalladzi yusabbihur-ra'du bihamdihi wal mala'ikatu min khifatih.",m:"Maha Suci Dzat yang petir bertasbih dengan memuji-Nya, demikian pula para malaikat karena takut kepada-Nya."}]},
+{t:"Ditimpa Musibah",i:[{a:"إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا",l:"Inna lillahi wa inna ilaihi raji'un. Allahumma'jurni fi mushibati wakhlif li khairan minha.",m:"Sesungguhnya kami milik Alloh dan kepada-Nya kami kembali. Ya Alloh, berilah aku pahala dalam musibahku dan gantilah dengan yang lebih baik."}]},
+{t:"Sebelum Tidur",i:[{a:"بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",l:"Bismikallahumma amutu wa ahya.",m:"Dengan nama-Mu ya Alloh, aku mati dan aku hidup."}]}
+];
