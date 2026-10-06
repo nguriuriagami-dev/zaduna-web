@@ -79,9 +79,9 @@ footer b{letter-spacing:3px;color:var(--accent)}
 <main id="konten"></main>
 <footer id="siteFooter"></footer>
 
-<script src="isi.js"></script>
 <script>
-if(typeof SITUS==='undefined'){document.body.innerHTML='<p style="padding:20px">File isi.js tidak ditemukan. Pastikan isi.js ada di folder yang sama dengan index.html.</p>';throw new Error('isi.js tidak ditemukan');}
+fetch('isi.json?v='+Date.now()).then(function(r){if(!r.ok)throw new Error('x');return r.json()}).then(function(D){
+const SITUS=D.SITUS,HALAMAN=D.HALAMAN,DOA=D.DOA;
 /* ==========================================================================
    KODE TAMPILAN — JANGAN DIUBAH
    ========================================================================== */
@@ -170,6 +170,8 @@ function renderDoa(f){
 }
 renderDoa();
 const q=document.getElementById('q'); if(q) q.addEventListener('input',e=>renderDoa(e.target.value));
+
+}).catch(function(){document.body.innerHTML='<p style="padding:20px">Isi situs gagal dimuat. Pastikan file isi.json ada di folder yang sama dengan index.html, dan buka situs lewat alamat https (bukan membuka file langsung).</p>';});
 </script>
 </body>
 </html>
