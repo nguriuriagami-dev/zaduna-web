@@ -176,50 +176,7 @@
     },
     {
      "tipe": "lipat",
-     "judul": "3. Puasa Ramadhan",
-     "isi": [
-      {
-       "tipe": "grid",
-       "isi": [
-        {
-         "tipe": "daftar",
-         "label": "Syarat",
-         "isi": [
-          "Islam",
-          "Baligh",
-          "Berakal",
-          "Mampu (tidak sakit/uzur)",
-          "Mukim (tidak safar)",
-          "Bagi wanita: suci dari haid dan nifas"
-         ]
-        },
-        {
-         "tipe": "daftar",
-         "label": "Rukun",
-         "isi": [
-          "Niat (sebelum terbit fajar untuk puasa wajib)",
-          "Menahan diri dari pembatal sejak terbit fajar hingga terbenam matahari"
-         ]
-        }
-       ]
-      },
-      {
-       "tipe": "pembatal",
-       "judul": "Pembatal",
-       "isi": [
-        "Makan dan minum dengan sengaja",
-        "Jima' (hubungan suami istri) di siang hari",
-        "Muntah dengan sengaja",
-        "Keluar mani dengan sengaja",
-        "Haid atau nifas",
-        "Murtad"
-       ]
-      }
-     ]
-    },
-    {
-     "tipe": "lipat",
-     "judul": "4. Zakat",
+     "judul": "3. Zakat",
      "isi": [
       {
        "tipe": "grid",
@@ -257,6 +214,49 @@
         "Tidak berniat",
         "Diberikan kepada yang bukan mustahik",
         "Menunda tanpa uzur hingga berdosa"
+       ]
+      }
+     ]
+    },
+    {
+     "tipe": "lipat",
+     "judul": "4. Puasa Ramadhan",
+     "isi": [
+      {
+       "tipe": "grid",
+       "isi": [
+        {
+         "tipe": "daftar",
+         "label": "Syarat",
+         "isi": [
+          "Islam",
+          "Baligh",
+          "Berakal",
+          "Mampu (tidak sakit/uzur)",
+          "Mukim (tidak safar)",
+          "Bagi wanita: suci dari haid dan nifas"
+         ]
+        },
+        {
+         "tipe": "daftar",
+         "label": "Rukun",
+         "isi": [
+          "Niat (sebelum terbit fajar untuk puasa wajib)",
+          "Menahan diri dari pembatal sejak terbit fajar hingga terbenam matahari"
+         ]
+        }
+       ]
+      },
+      {
+       "tipe": "pembatal",
+       "judul": "Pembatal",
+       "isi": [
+        "Makan dan minum dengan sengaja",
+        "Jima' (hubungan suami istri) di siang hari",
+        "Muntah dengan sengaja",
+        "Keluar mani dengan sengaja",
+        "Haid atau nifas",
+        "Murtad"
        ]
       }
      ]
