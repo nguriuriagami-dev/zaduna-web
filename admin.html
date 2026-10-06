@@ -129,7 +129,7 @@ function blockHTML(p){
 
 /* ---------- tampilan ---------- */
 function viewSitus(){
-  return '<div class="card">'+F('Nama situs','SITUS.nama')+F('Tulisan Arab di atas nama','SITUS.arab')+F('Subjudul','SITUS.subjudul')+
+  return '<div class="card">'+F('Nama situs','SITUS.nama')+F('Tulisan Arab di atas nama','SITUS.arab')+F('Subjudul','SITUS.subjudul')+F('Logo (nama file gambar, boleh kosong)','SITUS.logo',{hint:'mis. logo.png — unggah gambarnya ke GitHub dulu'})+
     F('Footer (bawah halaman)','SITUS.footer',{kind:'area',rows:3,hint:'boleh <b>tebal</b> dan <br> untuk baris baru'})+'</div>';
 }
 function viewHalaman(){
