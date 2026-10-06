@@ -19,7 +19,7 @@
     {
      "tipe": "lipat",
      "judul": "1. Dua Kalimat Syahadat",
-     "buka": true,
+     "buka": false,
      "isi": [
       {
        "tipe": "arab",
