@@ -166,6 +166,7 @@ function loginHTML(){
   '<div class="card"><h2 style="margin-top:0">Masuk</h2>'+
   '<label>Repository GitHub<input type="text" id="repo" value="'+esc(s.repo||'nguriuriagami-dev/zaduna-web')+'" placeholder="pemilik/nama-repo"></label>'+
   '<label>Branch<input type="text" id="branch" value="'+esc(s.branch||'main')+'"></label>'+
+  '<label>Alamat situs <span class="hint">(untuk tombol Lihat situs)</span><input type="text" id="site" value="'+esc(s.site||'https://zaaduna.netlify.app')+'"></label>'+
   '<label>Token akses GitHub<input type="password" id="token" value="'+esc(s.token||'')+'" placeholder="github_pat_…" autocomplete="off"></label>'+
   '<label class="chk"><input type="checkbox" id="ingat" checked> Ingat di perangkat ini</label>'+
   '<div style="margin-top:14px"><button class="btn" data-act="login">Masuk &amp; muat isi</button></div>'+
@@ -180,7 +181,7 @@ function loginHTML(){
   '<div class="warn">Token ini sama seperti kunci rumah. Jangan dibagikan atau difoto. Token hanya dikirim ke GitHub, tidak ke tempat lain. Jika hilang atau bocor, hapus di halaman token GitHub.</div></div></details>';
 }
 function mainHTML(){
-  var site='https://'+CFG.repo.split('/')[0]+'.github.io/'+CFG.repo.split('/')[1]+'/';
+  var site=CFG.site||'https://zaaduna.netlify.app';
   var tabs=[['situs','Situs'],['halaman','Halaman'],['doa','Do\'a Harian']].map(function(t){return '<button data-act="tab" data-v="'+t[0]+'" class="'+(view===t[0]?'on':'')+'">'+t[1]+'</button>'}).join('');
   var v=view==='situs'?viewSitus():view==='halaman'?viewHalaman():viewDoa();
   return '<div class="top"><h1>Admin ZAADUNA</h1><span class="sp"></span><a href="'+esc(site)+'" target="_blank" rel="noopener" class="btn ghost sm" style="text-decoration:none">Lihat situs</a><button class="btn ghost sm" data-act="reload">Muat ulang</button><button class="btn danger sm" data-act="logout">Keluar</button></div>'+
@@ -247,10 +248,10 @@ async function save(){
   btn.disabled=false;
 }
 async function doLogin(){
-  var repo=$('#repo').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,''), branch=$('#branch').value.trim()||'main', token=$('#token').value.trim();
+  var repo=$('#repo').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,''), branch=$('#branch').value.trim()||'main', token=$('#token').value.trim(), site=$('#site').value.trim()||'https://zaaduna.netlify.app';
   if(!/^[\w.-]+\/[\w.-]+$/.test(repo)){msg('Isi repository dengan format pemilik/nama-repo.','err');return}
   if(!token){msg('Tempel token akses terlebih dahulu.','err');return}
-  var prev=CFG, cfg={repo:repo,branch:branch,token:token}; CFG=cfg; msg('Memuat…');
+  var prev=CFG, cfg={repo:repo,branch:branch,token:token,site:site}; CFG=cfg; msg('Memuat…');
   try{
     await load();
     if($('#ingat').checked){try{localStorage.setItem('zaaduna_admin',JSON.stringify(cfg))}catch(e){}}
