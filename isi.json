@@ -39,11 +39,12 @@
          "isi": [
           {
            "tipe": "daftar",
-           "label": "Rukun",
+           "label": "",
            "isi": [
             "**Meniadakan** — segala bentuk penghambaan dan peribadatan (kepada selain Alloh)",
             "**Menetapkan** — penghambaan dan peribadatan hanya kepada Alloh"
-           ]
+           ],
+           "judul": "Rukun"
           },
           {
            "tipe": "pembatal",
