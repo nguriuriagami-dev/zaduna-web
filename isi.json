@@ -74,6 +74,16 @@
         {
          "tipe": "teks",
          "isi": "Yaitu mengakui secara lahir batin bahwa beliau adalah hamba Allah dan RasulNya yang diutus kepada manusia secara keseluruhan, serta mengamalkan konsekuensinya: menta’ati perintahnya, membenarkan ucapannya, menjauhi larangannya, dan tidak menyembah\nAllah kecuali dengan apa yang disyari’atkan."
+        },
+        {
+         "tipe": "judul",
+         "teks": "Makna"
+        },
+        {
+         "tipe": "daftar",
+         "label": "",
+         "judul": "",
+         "isi": []
         }
        ]
       },
@@ -421,6 +431,79 @@
         "Menghormati tetangga dan tamu",
         "Menyayangi hewan dan menjaga lingkungan"
        ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hal-muzru867",
+   "judul": "Zaaduna",
+   "makna": "website",
+   "isi": [
+    {
+     "tipe": "judul",
+     "teks": "agama"
+    },
+    {
+     "tipe": "teks",
+     "isi": "islam\niman\nihsan\nakhlak\ndo'a harian"
+    },
+    {
+     "tipe": "arab",
+     "isi": "كلمة العربية"
+    },
+    {
+     "tipe": "catatan",
+     "isi": "catatan"
+    },
+    {
+     "tipe": "daftar",
+     "label": "tingkatan pertama",
+     "judul": "islam",
+     "isi": [
+      "islam adalah"
+     ]
+    },
+    {
+     "tipe": "pembatal",
+     "judul": "Pembatal",
+     "isi": [
+      "pembatal islam"
+     ]
+    },
+    {
+     "tipe": "pasangan",
+     "label": "syarat",
+     "isi": [
+      [
+       "ilmu",
+       "jahil"
+      ]
+     ]
+    },
+    {
+     "tipe": "kartu",
+     "label": "rukun",
+     "judul": "islam",
+     "isi": []
+    },
+    {
+     "tipe": "grid",
+     "isi": []
+    },
+    {
+     "tipe": "lipat",
+     "judul": "masail",
+     "buka": false,
+     "isi": []
+    },
+    {
+     "tipe": "nomor",
+     "isi": [
+      {
+       "judul": "islam rukun ke: 1",
+       "isi": ""
       }
      ]
     }
