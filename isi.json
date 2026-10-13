@@ -467,15 +467,11 @@
        "isi": [
         {
          "tipe": "judul",
-         "teks": "Pria"
+         "teks": "Pria beserta SK"
         },
         {
          "tipe": "nomor",
          "isi": [
-          {
-           "judul": "Urut beserta syaratnya:",
-           "isi": ""
-          },
           {
            "judul": "1. Suami",
            "isi": ""
@@ -533,7 +529,56 @@
            "isi": ""
           },
           {
-           "judul": "15.",
+           "judul": "15. Mantan pembebas",
+           "isi": ""
+          }
+         ]
+        },
+        {
+         "tipe": "judul",
+         "teks": "Wanita beserta SK"
+        },
+        {
+         "tipe": "nomor",
+         "isi": [
+          {
+           "judul": "1. Istari",
+           "isi": ""
+          },
+          {
+           "judul": "2. Anak",
+           "isi": ""
+          },
+          {
+           "judul": "3. Cucu dari anak laki-laki",
+           "isi": ""
+          },
+          {
+           "judul": "4. Ibu",
+           "isi": ""
+          },
+          {
+           "judul": "5. Nenek dari ibu",
+           "isi": ""
+          },
+          {
+           "judul": "6. Nenek dari bapak",
+           "isi": ""
+          },
+          {
+           "judul": "7. Sudari kandung",
+           "isi": ""
+          },
+          {
+           "judul": "8. Saudari sebapak",
+           "isi": ""
+          },
+          {
+           "judul": "9. Saudari seibu",
+           "isi": ""
+          },
+          {
+           "judul": "10. Mantan pembebas",
            "isi": ""
           }
          ]
