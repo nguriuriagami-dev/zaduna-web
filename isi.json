@@ -459,15 +459,31 @@
     },
     {
      "tipe": "lipat",
-     "judul": "Ahli Waris Pria",
+     "judul": "Ahli Waris",
      "buka": false,
-     "isi": []
-    },
-    {
-     "tipe": "lipat",
-     "judul": "Ahli Waris Wanita",
-     "buka": false,
-     "isi": []
+     "isi": [
+      {
+       "tipe": "grid",
+       "isi": [
+        {
+         "tipe": "judul",
+         "teks": "Pria"
+        },
+        {
+         "tipe": "teks",
+         "isi": "Urut beserta syaratnya:\n\n1.  Suami\n2. Anak\n3. Cucu dari anak laki-laki\n4. Bapak\n5. Kakek dari bapak\n6. Saudara kandung\n7. Anak saudara kandung\n8. Saudara sebapak\n9. Anak saudara sebapak\n10. Saudara seibu\n11. Paman kandung jalur bapak\n12. Anak paman kandung jalur bapak\n13. Paman sebapak jalur bapak\n14. Anak paman sebapak jalur bapak\n15. \n\n"
+        },
+        {
+         "tipe": "judul",
+         "teks": "Wanita"
+        },
+        {
+         "tipe": "teks",
+         "isi": "Urut beserta syaratnya:\n\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
