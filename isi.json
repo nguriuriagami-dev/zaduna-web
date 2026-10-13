@@ -529,6 +529,18 @@
      "judul": "Ukuran Persenan",
      "buka": false,
      "isi": []
+    },
+    {
+     "tipe": "lipat",
+     "judul": "Ahli Waris Pria",
+     "buka": false,
+     "isi": []
+    },
+    {
+     "tipe": "lipat",
+     "judul": "Ahli Waris Wanita",
+     "buka": false,
+     "isi": []
     }
    ]
   },
