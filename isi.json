@@ -455,7 +455,37 @@
      "tipe": "lipat",
      "judul": "Ukuran Persenan",
      "buka": false,
-     "isi": []
+     "isi": [
+      {
+       "tipe": "nomor",
+       "isi": [
+        {
+         "judul": "1. Setengah",
+         "isi": "1\\2"
+        },
+        {
+         "judul": "2. Dua pertiga",
+         "isi": "2\\3"
+        },
+        {
+         "judul": "3. Sepertiga",
+         "isi": "1\\3"
+        },
+        {
+         "judul": "4. Seperempat",
+         "isi": "1\\4"
+        },
+        {
+         "judul": "5. Seperenam",
+         "isi": "1\\6"
+        },
+        {
+         "judul": "6. Seperdelapan",
+         "isi": "1\\8"
+        }
+       ]
+      }
+     ]
     },
     {
      "tipe": "lipat",
