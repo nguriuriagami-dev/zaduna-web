@@ -470,16 +470,73 @@
          "teks": "Pria"
         },
         {
-         "tipe": "teks",
-         "isi": "Urut beserta syaratnya:\n\n1.  Suami\n2. Anak\n3. Cucu dari anak laki-laki\n4. Bapak\n5. Kakek dari bapak\n6. Saudara kandung\n7. Anak saudara kandung\n8. Saudara sebapak\n9. Anak saudara sebapak\n10. Saudara seibu\n11. Paman kandung jalur bapak\n12. Anak paman kandung jalur bapak\n13. Paman sebapak jalur bapak\n14. Anak paman sebapak jalur bapak\n15. \n\n"
-        },
-        {
-         "tipe": "judul",
-         "teks": "Wanita"
-        },
-        {
-         "tipe": "teks",
-         "isi": "Urut beserta syaratnya:\n\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10."
+         "tipe": "nomor",
+         "isi": [
+          {
+           "judul": "Urut beserta syaratnya:",
+           "isi": ""
+          },
+          {
+           "judul": "1. Suami",
+           "isi": ""
+          },
+          {
+           "judul": "2. Anak",
+           "isi": ""
+          },
+          {
+           "judul": "3. Cucu dari anak laki-laki",
+           "isi": ""
+          },
+          {
+           "judul": "4. Bapak",
+           "isi": ""
+          },
+          {
+           "judul": "5. Kakek dari bapak",
+           "isi": ""
+          },
+          {
+           "judul": "6. Saudara kandung",
+           "isi": ""
+          },
+          {
+           "judul": "7. Anak saudara kandung",
+           "isi": ""
+          },
+          {
+           "judul": "8. Saudara sebapak",
+           "isi": ""
+          },
+          {
+           "judul": "9. Anak saudara sebapak",
+           "isi": ""
+          },
+          {
+           "judul": "10. Saudara seibu",
+           "isi": ""
+          },
+          {
+           "judul": "11. Paman kandung jalur bapak",
+           "isi": ""
+          },
+          {
+           "judul": "12. Anak paman kandung jalur bapak",
+           "isi": ""
+          },
+          {
+           "judul": "13. Paman sebapak jalur bapak",
+           "isi": ""
+          },
+          {
+           "judul": "14. Anak paman sebapak jalur bapak",
+           "isi": ""
+          },
+          {
+           "judul": "15.",
+           "isi": ""
+          }
+         ]
         }
        ]
       }
