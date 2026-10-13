@@ -569,48 +569,19 @@
          "teks": "Wanita"
         },
         {
-         "tipe": "nomor",
+         "tipe": "pembatal",
+         "judul": "",
          "isi": [
-          {
-           "judul": "1. Istari",
-           "isi": ""
-          },
-          {
-           "judul": "2. Anak",
-           "isi": ""
-          },
-          {
-           "judul": "3. Cucu dari anak laki-laki",
-           "isi": ""
-          },
-          {
-           "judul": "4. Ibu",
-           "isi": ""
-          },
-          {
-           "judul": "5. Nenek dari ibu",
-           "isi": ""
-          },
-          {
-           "judul": "6. Nenek dari bapak",
-           "isi": ""
-          },
-          {
-           "judul": "7. Sudari kandung",
-           "isi": ""
-          },
-          {
-           "judul": "8. Saudari sebapak",
-           "isi": ""
-          },
-          {
-           "judul": "9. Saudari seibu",
-           "isi": ""
-          },
-          {
-           "judul": "10. Mantan pembebas",
-           "isi": ""
-          }
+          "1. Istari |",
+          "2. Anak |",
+          "3. Cucu dari anak laki-laki |",
+          "4. Ibu |",
+          "5. Nenek dari ibu |",
+          "6. Nenek dari bapak |",
+          "7. Sudari kandung |",
+          "8. Saudari sebapak |",
+          "9. Saudari seibu |",
+          "10. Mantan pembebas |"
          ]
         }
        ]
