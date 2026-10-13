@@ -493,96 +493,120 @@
      "buka": false,
      "isi": [
       {
-       "tipe": "grid",
+       "tipe": "nomor",
        "isi": [
         {
-         "tipe": "judul",
-         "teks": "Pria"
+         "judul": "Pria",
+         "isi": ""
         },
         {
-         "tipe": "nomor",
-         "isi": [
-          {
-           "judul": "1. Suami",
-           "isi": ""
-          },
-          {
-           "judul": "2. Anak",
-           "isi": ""
-          },
-          {
-           "judul": "3. Cucu dari anak laki-laki",
-           "isi": ""
-          },
-          {
-           "judul": "4. Bapak",
-           "isi": ""
-          },
-          {
-           "judul": "5. Kakek dari bapak",
-           "isi": ""
-          },
-          {
-           "judul": "6. Saudara kandung",
-           "isi": ""
-          },
-          {
-           "judul": "7. Anak saudara kandung",
-           "isi": ""
-          },
-          {
-           "judul": "8. Saudara sebapak",
-           "isi": ""
-          },
-          {
-           "judul": "9. Anak saudara sebapak",
-           "isi": ""
-          },
-          {
-           "judul": "10. Saudara seibu",
-           "isi": ""
-          },
-          {
-           "judul": "11. Paman kandung jalur bapak",
-           "isi": ""
-          },
-          {
-           "judul": "12. Anak paman kandung jalur bapak",
-           "isi": ""
-          },
-          {
-           "judul": "13. Paman sebapak jalur bapak",
-           "isi": ""
-          },
-          {
-           "judul": "14. Anak paman sebapak jalur bapak",
-           "isi": ""
-          },
-          {
-           "judul": "15. Mantan pembebas",
-           "isi": ""
-          }
-         ]
+         "judul": "1. Suami",
+         "isi": ""
         },
         {
-         "tipe": "judul",
-         "teks": "Wanita"
+         "judul": "2. Anak",
+         "isi": ""
         },
         {
-         "tipe": "pembatal",
-         "judul": "",
-         "isi": [
-          "1. Istari |",
-          "2. Anak |",
-          "3. Cucu dari anak laki-laki |",
-          "4. Ibu |",
-          "5. Nenek dari ibu |",
-          "6. Nenek dari bapak |",
-          "7. Sudari kandung |",
-          "8. Saudari sebapak |",
-          "9. Saudari seibu |",
-          "10. Mantan pembebas |"
-         ]
+         "judul": "3. Cucu dari anak laki-laki",
+         "isi": ""
+        },
+        {
+         "judul": "4. Bapak",
+         "isi": ""
+        },
+        {
+         "judul": "5. Kakek dari bapak",
+         "isi": ""
+        },
+        {
+         "judul": "6. Saudara kandung",
+         "isi": ""
+        },
+        {
+         "judul": "7. Anak saudara kandung",
+         "isi": ""
+        },
+        {
+         "judul": "8. Saudara sebapak",
+         "isi": ""
+        },
+        {
+         "judul": "9. Anak saudara sebapak",
+         "isi": ""
+        },
+        {
+         "judul": "10. Saudara seibu",
+         "isi": ""
+        },
+        {
+         "judul": "11. Paman kandung jalur bapak",
+         "isi": ""
+        },
+        {
+         "judul": "12. Anak paman kandung jalur bapak",
+         "isi": ""
+        },
+        {
+         "judul": "13. Paman sebapak jalur bapak",
+         "isi": ""
+        },
+        {
+         "judul": "14. Anak paman sebapak jalur bapak",
+         "isi": ""
+        },
+        {
+         "judul": "15. Mantan pembebas",
+         "isi": ""
+        }
+       ]
+      },
+      {
+       "tipe": "nomor",
+       "isi": [
+        {
+         "judul": "Wanita",
+         "isi": ""
+        },
+        {
+         "judul": "1. Istari",
+         "isi": ""
+        },
+        {
+         "judul": "2. Anak",
+         "isi": ""
+        },
+        {
+         "judul": "3. Cucu dari anak laki-laki",
+         "isi": ""
+        },
+        {
+         "judul": "4. Ibu",
+         "isi": ""
+        },
+        {
+         "judul": "5. Nenek dari ibu",
+         "isi": ""
+        },
+        {
+         "judul": "6. Nenek dari bapak",
+         "isi": ""
+        },
+        {
+         "judul": "7. Sudari kandung",
+         "isi": ""
+        },
+        {
+         "judul": "8. Saudari sebapak",
+         "isi": ""
+        },
+        {
+         "judul": "9. Saudari seibu",
+         "isi": ""
+        },
+        {
+         "judul": "10. Mantan pembebas",
+         "isi": ""
         }
        ]
       }
