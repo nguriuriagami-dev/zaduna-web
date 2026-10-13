@@ -512,15 +512,23 @@
   {
    "id": "hal-mv6pkmzh",
    "judul": "Faraidh",
-   "makna": "Ilmu yang dengannya dapat diketahui, siapa yang berhak mendapat warisan, siapa yang tidak berhak dan berapa jumlah\\ukuran untuk setiap ahli waris.",
+   "makna": "Ilmu yang dengannya dapat diketahui, siapa yang berhak mendapat warisan, siapa yang tidak berhak dan berapa ukuran (persenan) untuk setiap ahli waris.",
    "isi": [
     {
      "tipe": "judul",
-     "teks": "Tarikah"
+     "teks": "Rincian Pembahasan"
     },
     {
-     "tipe": "teks",
-     "isi": "Seluruh apa yang ditinggalkan oleh mayit berupa harta, hak ataupun qisas."
+     "tipe": "lipat",
+     "judul": "Tarikah",
+     "buka": false,
+     "isi": []
+    },
+    {
+     "tipe": "lipat",
+     "judul": "Ukuran Persenan",
+     "buka": false,
+     "isi": []
     }
    ]
   },
